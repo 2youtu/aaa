@@ -11,12 +11,9 @@ def usage(name):
     print 'usage: %s <ip_addr> <port>' % name
 
 def main():
-    if len(sys.argv) !=3:
-        usage(sys.argv[0])
-        sys.exit()
     s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     try:
-        s.connect((sys.argv[1],int(sys.argv[2])))
+        s.connect(("120.79.230.209",4447))
         print 'connect ok'
     except:
         print 'connect faild'
